@@ -1,241 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pdy music</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdy Music</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+</head>
+<body>
+    <header class="menu">
+        <img src="img/logo.png" alt="Pdy music logo.">
+        <nav>
+            <a href="#" class="link">Inicio</a>
+            <a href="#" class="link">Musicas</a>
+            <a href="#" class="link">Podcasts</a>
+            <a href="#" class="link">Envie sua musica</a>
+            <button class="loginbtn" id="loginbtn">Entrar</button>
+        </nav>
+    </header>
 
-   <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <div class="container">
+        <div class="main-content">
+            <!-- Player -->
+            <div class="musicaatual">
+                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <div class="box1">
+                    <h2 id="nomeradio">Radio atual</h2>
+                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                </div>
+                <div id="aplayer"></div>
+            </div>
 
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #111;
-      padding: 15px 30px;
-      border-bottom: 2px solid red;
-    }
+            <!-- Top Músicas -->
+            <div class="topmusic">
+                <div class="box1">
+                    <h3>TOP MÚSICAS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img src="img/emoji1.jpg" alt="Rock Metal">
+                    <img src="img/emoji2.jpg" alt="Funk Brasil">
+                    <img src="img/emoji3.jpg" alt="Sertanejo Raiz">
+                    <img src="img/emoji4.jpg" alt="MPB">
+                </div>
+            </div>
 
-    .menu img {
-      height: 40px;
-    }
+            <!-- Top Podcasts -->
+            <div class="toppodcast">
+                <div class="box1">
+                    <h3>TOP PODCASTS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img src="img/emoji5.jpg" alt="Podcast 1">
+                    <img src="img/emoji3.jpg" alt="Podcast 2">
+                    <img src="img/emoji1.jpg" alt="Podcast 3">
+                    <img src="img/joinha.jpeg" alt="Podcast 4">
+                </div>
+            </div>
+        </div>
 
-    .menu .link {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-    }
-
-    #loginbtn {
-      background-color: red;
-      color: white;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 20px;
-    }
-
-    .sidebar {
-      width: 20%;
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      height: fit-content;
-    }
-
-    .main-content {
-      flex: 1;
-      margin: 0 20px;
-    }
-
-    .box {
-      background-color: #1a1a1a;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .box img.main-img {
-      width: 60%;
-      max-width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 0 10px #ff4747;
-    }
-
-    h2 {
-      margin-bottom: 15px;
-      color: #ff4747;
-    }
-
-    .image-column {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .image-column img {
-      width: 100px;
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-    }
-
-    .image-column img:hover {
-      transform: scale(1.05);
-    }
-
-    .horizontal-section {
-      background: linear-gradient(to right, #1a1a1a, #2b2b2b, #1a1a1a);
-    }
-
-    .image-row {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .image-row img {
-      width: 160px;
-      border-radius: 20px;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      padding: 20px;
-      border-top: 2px solid red;
-      background-color: #111;
-    }
-
-    footer a {
-      color: #aaa;
-      margin: 0 10px;
-      text-decoration: none;
-    }
- </style>
- </head>
- <body>
-  <header class="menu">
-  <img src="img/logo.png" alt="Pdy music logo">
-   <nav>
-     <a href="#" class="link">Início</a>
-     <a href="#" class="link">Músicas</a>
-     <a href="#" class="link">Podcasts</a>
-     <a href="#" class="link">Envie sua música</a>
-   </nav>
-
-  <button id="loginbtn">Entrar</button>
-</header>
-
-<div class="container">
-  <!-- Sidebar esquerda -->
-  <div class="Top Esquerda">
-    <h3>Rádios Mais Ouvidas</h3>
-    <ul>
-      <br>
-      <li>Top Brasil</li>
-      <li>Flashback Hits</li>
-      <li>Clássicos do Rock</li>
-      <li>Sertanejo Raiz</li>
-    </ul>
-    <br>
-    <h3>Podcasts em Alta</h3>
-    <ul>
-      <li>Papo Reto</li>
-      <li>Hora do Medo</li>
-      <li>Conexão Música</li>
-      <li>Notícias em 10</li>
-    </ul>
-  </div>
-
-  
-  <div class="main-content">
-    <!-- Rádio atual -->
-    <div class="box">
-      <img src="img/joinha.jpeg" alt="Radio atual" class="main-img">
-      <h2 id="nomeradio">Rádio em destaque</h2>
-      <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
-      <div id="aplayer"></div>
+        <!-- Sidebar com ouvintes -->
+        <aside class="topouvintes">
+            <h3>Top Ouvintes</h3>
+            <h4>Rogerinho</h4>
+            <h4>China</h4>
+            <h4>XamBaoXD</h4>
+        </aside>
     </div>
 
-    <!-- Músicas em alta -->
-    <div class="box horizontal-section">
-      <h2>TOP MÚSICAS PDY RADIO</h2>
-      <div class="image-column">
-        <img src="img/emoji3.jpg" alt="">
-        <img src="img/emoji1.jpg" alt="">
-        <img src="img/emoji5.jpg" alt="">
-        
-      </div>
-    </div>
+    <footer class="rodape">
+        <div>
+            <img src="" alt="Instagram">
+            <img src="" alt="Facebook">
+            <img src="" alt="X">
+            <img src="" alt="E-mail de Contato">
+            <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
+        </div>
+    </footer>
 
-    <!-- Podcasts recomendados -->
-    <div class="box horizontal-section">
-      <h2>TOP PODCASTS PDY RADIO</h2>
-      <div class="image-row">
-        <img src="/mnt/data/image.png" alt="Imagem 1">
-        <img src="/mnt/data/image.png" alt="Imagem 2">
-      </div>
-    </div>
-  </div>
+    <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            fixed: false,
+            autoplay: true,
+            loop: 'all',
+            order: 'list',
+            preload: 'auto',
+            audio: [
+                {
+                    name: 'PDY Rádio Ao Vivo',
+                    artist: 'DJ Conectado',
+                    url: 'playlists/shboom.mp3',
+                    cover: ''
+                }
+            ]
+        });
 
-  <!-- Top direita -->
-  <div class="sidebar">
-    <h3>Novidades</h3>
-    <ul>
-      <li>Nova programação ao vivo!</li>
-      <br>
-      <li>Top podcasts atualizados</li>
-      <br>
-      <li>Lançamentos da semana</li>
-      <br>
-    </ul>
-    <h3>Redes Sociais</h3>
-    <ul>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-    </ul>
-  </div>
-</div>
-<footer>
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">E-mail de Contato</a>
-<p>Copyright ©2025 PDY MUSIC - Todos os direitos reservados</p>
-</footer>
-<script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
-<script>
-    const ap = new APlayer({
-      container: document.getElementById('aplayer'),
-      audio: [{
-        name: 'DJ Conectado',
-        artist: 'PDY',
-        url: 'teste.mp3',
-        cover: 'img/logo2.png'
-      }]
-    });
-</script>
+        ap.on('loadedmetadata', () => {
+            const progress = ap.container.querySelector('.aplayer-bar-wrap');
+            if (progress) {
+                progress.style.pointerEvents = 'none';
+                progress.style.opacity = '0.6';
+            }
+        });
+    </script>
 </body>
 </html>
