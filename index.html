@@ -71,5 +71,33 @@
             <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            fixed: false,
+            autoplay: false,
+            loop: 'all',
+            order: 'list',
+            preload: 'auto',
+            listFolded: false,
+            audio: [
+                {
+                    name: 'Shaabom',
+                    artist: 'DJ Conectado',
+                    url: 'playlists/shboom.mp3',
+                    cover: ''
+                }
+            ]
+        });
+
+        ap.on('loadedmetadata', () => {
+            const progress = ap.container.querySelector('.aplayer-bar-wrap');
+            if (progress) {
+                progress.style.pointerEvents = 'none';
+                progress.style.opacity = '0.6';
+            }
+        });
+    </script>
 </body>
 </html>
