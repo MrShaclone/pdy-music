@@ -83,31 +83,21 @@
         const ap = new APlayer({
             container: document.getElementById('aplayer'),
             fixed: false,
-
-            autoplay: false,
+            autoplay: true,
             loop: 'all',
             order: 'list',
             preload: 'auto',
             listFolded: false,
             audio: [
                 {
-                    name: 'Shaabom',
-
-            autoplay: true,
-            loop: 'all',
-            order: 'list',
-            preload: 'auto',
-            audio: [
-                {
                     name: 'PDY Rádio Ao Vivo',
-
                     artist: 'DJ Conectado',
                     url: 'playlists/shboom.mp3',
                     cover: ''
                 }
             ]
         });
-
+    
         ap.on('loadedmetadata', () => {
             const progress = ap.container.querySelector('.aplayer-bar-wrap');
             if (progress) {
