@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdy Music</title>
+    <link rel="stylesheet" type="text/css" href="../styles/enviemusica.css">
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+</head>
+<body>
+    <header class="menu">
+        <img src="../img/logo.png" alt="Pdy music logo.">
+        <nav>
+            <a href="#" class="link">Inicio</a>
+            <a href="#" class="link">Musicas</a>
+            <a href="#" class="link">Podcasts</a>
+            <a href="#" class="link">Envie sua musica</a>
+            <button class="loginbtn" id="loginbtn">Entrar</button>
+        </nav>
+    </header>
+
+    <div class="contact-form">
+        <span class="heading">Envie Sua Música</span>
+        <form action="#" method="POST" enctype="multipart/form-data">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required></textarea>
+      
+          <label for="file">Arquivo de música:</label>
+          <input type="file" id="file" name="file" accept="audio/*" required>
+      
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+  
+    
+    <footer class="rodape">
+        <div>
+            <img src="" alt="Instagram">
+            <img src="" alt="Facebook">
+            <img src="" alt="X">
+            <img src="" alt="E-mail de Contato">
+            <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
+        </div>
+    </footer>
+</body>
+</html>
