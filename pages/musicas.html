@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDY Music</title>
+    <title>Pdy Music</title>
+    <link rel="stylesheet" type="text/css" href="../styles/musicas.css">
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
 </head>
 <body>
-    
+    <header class="menu">
+        <img src="img/logo.png" alt="Pdy music logo.">
+        <nav>
+            <a href="#" class="link">Inicio</a>
+            <a href="#" class="link">Musicas</a>
+            <a href="#" class="link">Podcasts</a>
+            <a href="#" class="link">Envie sua musica</a>
+            <button class="loginbtn" id="loginbtn">Entrar</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Player -->
+            <div class="musicaatual">
+                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <div class="box1">
+                    <h2 id="nomeradio">Radio atual</h2>
+                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                </div>
+                <div id="aplayer"></div>
+            </div>
+
+            <!-- Top Músicas -->
+            <div class="topmusic">
+                <div class="box1">
+                    <h3>TOP MÚSICAS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img src="img/rock-metal.jpg" alt="Rock Metal">
+                    <img src="img/funk-brasil.jpg" alt="Funk Brasil">
+                    <img src="img/sertanejo.jpg" alt="Sertanejo">
+                    <img src="img/mpb.jpg" alt="MPB">
+                    <img src="img/lofi.jpg" alt="Lo-fi">
+                    <img src="img/trap.jpg" alt="Trap">
+                    <img src="img/forro.jpg" alt="Forró">
+                    <img src="img/eletronica.jpg" alt="Eletrônica">
+                    <img src="img/pagode.jpg" alt="Pagode">
+                    <img src="img/Phonk.jpg" alt="Phonk">
+                    <img src="img/reggae.jpg" alt="Reggae">
+                    <img src="img/gospel.jpg" alt="Gospel">
+                    <img src="img/samba.jpg" alt="Samba">
+                    <img src="img/sertanejo-raiz.jpg" alt="Sertanejo Raiz">
+                    <img src="img/rock-classico.jpg" alt="Rock Clássico">
+                    <img src="img/hip-hop.jpg" alt="Hip Hop">
+                    <img src="img/romanticas.jpg" alt="Românticas">
+                    <img src="img/flashback-anos80.jpg" alt="Flashback Anos 80">
+                    <img src="img/pop-rock.jpg" alt="Pop Rock">
+                    <img src="img/pop-internacional.jpg" alt="Pop Internacional">
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Sidebar com ouvintes -->
+        <aside class="topouvintes">
+            <h3>Top Ouvintes</h3>
+            <h4>Rogerinho</h4>
+            <h4>China</h4>
+            <h4>XamBaoXD</h4>
+        </aside>
+    </div>
+
+    <footer class="rodape">
+        <div>
+            <img src="" alt="Instagram">
+            <img src="" alt="Facebook">
+            <img src="" alt="X">
+            <img src="" alt="E-mail de Contato">
+            <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            fixed: false,
+            autoplay: true,
+            loop: 'all',
+            order: 'list',
+            preload: 'auto',
+            listFolded: false,
+            audio: [
+                {
+                    name: 'PDY Rádio Ao Vivo',
+                    artist: 'DJ Conectado',
+                    url: 'playlists/shboom.mp3',
+                    cover: ''
+                }
+            ]
+        });
+
+        ap.on('loadedmetadata', () => {
+            const progress = ap.container.querySelector('.aplayer-bar-wrap');
+            if (progress) {
+                progress.style.pointerEvents = 'none';
+                progress.style.opacity = '0.6';
+            }
+        });
+    </script>
 </body>
 </html>
