@@ -77,11 +77,22 @@
         </div>
     </footer>
 
+
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
     <script>
         const ap = new APlayer({
             container: document.getElementById('aplayer'),
             fixed: false,
+
+            autoplay: false,
+            loop: 'all',
+            order: 'list',
+            preload: 'auto',
+            listFolded: false,
+            audio: [
+                {
+                    name: 'Shaabom',
+
             autoplay: true,
             loop: 'all',
             order: 'list',
@@ -89,6 +100,7 @@
             audio: [
                 {
                     name: 'PDY Rádio Ao Vivo',
+
                     artist: 'DJ Conectado',
                     url: 'playlists/shboom.mp3',
                     cover: ''
