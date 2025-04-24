@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pdy Music</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
 </head>
 <body>
     <header class="menu">
@@ -17,51 +18,55 @@
             <button class="loginbtn" id="loginbtn">Entrar</button>
         </nav>
     </header>
-    <br>
+
     <div class="container">
-        <div class="musicaatual">
-            <img src="img/joinha.jpeg" alt="Radio atual!">
-            <div class="box1">
-                <h2 id="nomeradio">Radio atual</h2>
-                <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+        <div class="main-content">
+            <!-- Player -->
+            <div class="musicaatual">
+                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <div class="box1">
+                    <h2 id="nomeradio">Radio atual</h2>
+                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                </div>
+                <div id="aplayer"></div>
             </div>
-            <audio controls id="musica">
-                <source src="teste.mp3" type="audio/mpeg">
-                Seu navegador não suporta áudio.
-            </audio>
+
+            <!-- Top Músicas -->
+            <div class="topmusic">
+                <div class="box1">
+                    <h3>TOP MÚSICAS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img src="img/emoji1.jpg" alt="Rock Metal">
+                    <img src="img/emoji2.jpg" alt="Funk Brasil">
+                    <img src="img/emoji3.jpg" alt="Sertanejo Raiz">
+                    <img src="img/emoji4.jpg" alt="MPB">
+                </div>
+            </div>
+
+            <!-- Top Podcasts -->
+            <div class="toppodcast">
+                <div class="box1">
+                    <h3>TOP PODCASTS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img src="img/emoji5.jpg" alt="Podcast 1">
+                    <img src="img/emoji3.jpg" alt="Podcast 2">
+                    <img src="img/emoji1.jpg" alt="Podcast 3">
+                    <img src="img/joinha.jpeg" alt="Podcast 4">
+                </div>
+            </div>
         </div>
-        <div class="topmusic">
-            <div class="box1">
-                <h3>TOP MUSICAS PDY RADIO</h3>
-            </div>
-            <div class="box2">
-                <img src="img/emoji1.jpg" alt="Rock Metal">
-                <img src="img/emoji2.jpg" alt="Funk Brasil">
-                <img src="img/emoji3.jpg" alt="Sertanejo Raiz">
-                <img src="img/emoji4.jpg" alt="MPB">
-            </div>
-        </div>
-        <div class="topouvintes">
+
+        <!-- Sidebar com ouvintes -->
+        <aside class="topouvintes">
             <h3>Top Ouvintes</h3>
-            <h4><img src="" alt="Rogerinho"> Rogerinho</h4>
-            <h4><img src="" alt="China"> China</h4>
-            <h4><img src="" alt="XamBaoXD"> XamBaoXD</h4>
-        </div>
-        <div class="toppodcast">
-            <div class="box1">
-                <h3>TOP PODCASTS PDY RADIO</h3>
-            </div>
-            <div class="box2">
-                <img src="img/emoji5.jpg" alt="Rock Metal">
-                <img src="img/emoji3.jpg" alt="Funk Brasil">
-                <img src="img/emoji1.jpg" alt="Sertanejo Raiz">
-                <img src="img/joinha.jpeg" alt="MPB">
-            </div>
-        </div>
-        <div class="chat">
-            <img src="" alt="Ainda sem nada!">
-        </div>
+            <h4>Rogerinho</h4>
+            <h4>China</h4>
+            <h4>XamBaoXD</h4>
+        </aside>
     </div>
+
     <footer class="rodape">
         <div>
             <img src="" alt="Instagram">
@@ -71,11 +76,14 @@
             <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
         </div>
     </footer>
+
+
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
     <script>
         const ap = new APlayer({
             container: document.getElementById('aplayer'),
             fixed: false,
+
             autoplay: false,
             loop: 'all',
             order: 'list',
@@ -84,6 +92,15 @@
             audio: [
                 {
                     name: 'Shaabom',
+
+            autoplay: true,
+            loop: 'all',
+            order: 'list',
+            preload: 'auto',
+            audio: [
+                {
+                    name: 'PDY Rádio Ao Vivo',
+
                     artist: 'DJ Conectado',
                     url: 'playlists/shboom.mp3',
                     cover: ''
