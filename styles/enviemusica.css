@@ -84,10 +84,9 @@ nav {
 
 /* formulario para enviar as musicas*/
 
-/* formulario para enviar as musicas */
 
 .contact-form {
-    background-color: #0a192f; /* azul escuro elegante */
+    background-color: #0a192f;
     padding: 40px;
     border-radius: 12px;
     width: 100%;
@@ -99,7 +98,7 @@ nav {
   
   .contact-form .heading {
     font-size: 28px;
-    color: #61dafb; /* azul claro bonito */
+    color: #61dafb;
     margin-bottom: 24px;
     font-weight: bold;
     text-align: center;
