@@ -6,6 +6,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     padding: 20px 30px;
+    color: black;
   }
   
   .title {
@@ -124,6 +125,7 @@
   
   .google-login-button {
     border: 2px solid #747474;
+    color: black;
   }
   
   .apple-icon,
