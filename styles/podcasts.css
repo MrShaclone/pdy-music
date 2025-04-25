@@ -50,7 +50,7 @@ nav {
 }
 
 .loginbtn:hover {
-    background-color: #0a3d62;
+    background-color: #0b446d;
 }
 
 /* container */
@@ -94,7 +94,7 @@ nav {
     border-radius: 5px;
 }
 
-.topmusic, .toppodcast {
+.topmusic{
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 12px;
@@ -102,7 +102,7 @@ nav {
     box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
 }
 
-.topmusic .box1 h3, .toppodcast .box1 h3 {
+.topmusic .box1 h3, .box1 h3 {
     color: #0a3d62;
     margin-bottom: 10px;
 }
@@ -161,7 +161,6 @@ nav {
     text-align: center;
     border-top: 2px solid #0a3d62;
     margin-top: 40px;
-    
 }
 
 .rodape img {
@@ -182,7 +181,6 @@ nav {
     gap: 20px;
     padding: 20px;
     justify-items: center;
-    
 }
 
 .topmusic .box2 img {
@@ -200,40 +198,3 @@ nav {
     box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
 }
 
-
-.toppodcast .box2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.toppodcast .box2 img {
-    width: 100%;
-    max-width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
-}
-
-.toppodcast .box2 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
-}
-.teste{
-    cursor: pointer;
-}
-
-.musicaatuall{
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
-    border: 2px solid rgba(56, 56, 56, 0.904);
-}

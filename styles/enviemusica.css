@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 0px 15px;
+    border-bottom: 2px solid #0a3d62;
+}
+
+.menu img {
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #0a3d62;
+}
+
+.loginbtn {
+    padding: 8px 16px;
+    background-color: #0a3d62;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    background-color: #0a3d62;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    padding: 20px;}
+
+/* footer */
+.rodape {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #0a3d62;
+    margin-top: 40px;
+    
+}
+
+.rodape img {
+    width: 24px;
+    margin: 0 5px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.rodape p {
+    color: #888;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+/* formulario para enviar as musicas*/
+
+
+.contact-form {
+    background-color: #0a192f;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  .contact-form .heading {
+    font-size: 28px;
+    color: #61dafb;
+    margin-bottom: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-form label {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #112240;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #61dafb;
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #63a4ff;
+    transform: scale(1.05);
+  }
+.heading{
+    margin-left: 150px;
+}  
