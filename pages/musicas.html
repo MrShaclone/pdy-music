@@ -23,9 +23,9 @@
         <div class="main-content">
             <!-- Player -->
             <div class="musicaatual">
-                <img src="../img/joinha.jpeg" alt="Radio atual!">
+                <img src="../img/logo2.png" alt="Radio atual!" id="img-radio">
                 <div class="box1">
-                    <h2 id="nomeradio">Radio atual</h2>
+                    <h2 id="nome-radio"></h2>
                     <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
                 </div>
                 <div id="aplayer"></div>
@@ -37,10 +37,10 @@
                     <h3>MÚSICAS PDY RADIO</h3>
                 </div>
                 <div class="box2">
-                    <img class = "teste" src="../img/radio-rock-metal.jpg" alt="Rock Metal">
-                    <img class = "teste" src="../img/funkbrasil.jpg" alt="Funk Brasil">
-                    <img class = "teste" src="../img/sertanejo.jpg" alt="Sertanejo">
-                    <img class = "teste" src="../img/radio-mpb.jpg" alt="MPB">
+                    <img class = "teste" src="../img/radio-rock-metal.jpg" alt="Rock Metal" id="rock-metal">
+                    <img class = "teste" src="../img/funkbrasil.jpg" alt="Funk Brasil" id="funk-brasil">
+                    <img class = "teste" src="../img/sertanejo.jpg" alt="Sertanejo" id="sertanejo-raiz">
+                    <img class = "teste" src="../img/radio-mpb.jpg" alt="MPB" id="mpb">
                     <img class = "teste" src="../img/lofiradio.jpg" alt="Lo-fi">
                     <img class = "teste" src="../img/trapradio.png" alt="Trap">
                     <img class = "teste" src="../img/forroradio.jpg" alt="Forró">
@@ -79,34 +79,7 @@
             <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
         </div>
     </footer>
-
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
-    <script>
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            fixed: false,
-            autoplay: true,
-            loop: 'all',
-            order: 'list',
-            preload: 'auto',
-            listFolded: false,
-            audio: [
-                {
-                    name: 'PDY Rádio Ao Vivo',
-                    artist: 'DJ Conectado',
-                    url: '../playlists/shboom.mp3',
-                    cover: ''
-                }
-            ]
-        });
-
-        ap.on('loadedmetadata', () => {
-            const progress = ap.container.querySelector('.aplayer-bar-wrap');
-            if (progress) {
-                progress.style.pointerEvents = 'none';
-                progress.style.opacity = '0.6';
-            }
-        });
-    </script>
+    <script src="../scripts/app.js"></script>
 </body>
 </html>
