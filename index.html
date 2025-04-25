@@ -11,27 +11,27 @@
     <header class="menu">
         <img src="img/logo.png" alt="Pdy music logo.">
         <nav>
-            <a href="#" class="link">Inicio</a>
-            <a href="#" class="link">Musicas</a>
-            <a href="#" class="link">Podcasts</a>
-            <a href="#" class="link">Envie sua musica</a>
-            <button class="loginbtn" id="loginbtn">Entrar</button>
+            <a href="index.html" class="link">Início</a>
+            <a href="pages/musicas.html" class="link">Músicas</a>
+            <a href="pages/podcasts.html" class="link">Podcasts</a>
+            <a href="pages/envieMusica.html" class="link">Envie sua música</a>
+            <a href="pages/loginForm.html"><button class="loginbtn" id="loginbtn">Entrar</button></a>
         </nav>
     </header>
 
     <div class="container">
         <div class="main-content">
-            <!-- Player -->
+        
             <div class="musicaatual">
                 <img src="img/joinha.jpeg" alt="Radio atual!">
                 <div class="box1">
-                    <h2 id="nomeradio">Radio atual</h2>
-                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                    <h2 id="nomeradio">Rádio atual</h2>
+                    <p>Uma seleção repleta de hits de sucesso para você ouvir</p>
                 </div>
                 <div id="aplayer"></div>
             </div>
 
-            <!-- Top Músicas -->
+            
             <div class="topmusic">
                 <div class="box1">
                     <h3>TOP MÚSICAS PDY RADIO</h3>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <!-- Top Podcasts -->
+
             <div class="toppodcast">
                 <div class="box1">
                     <h3>TOP PODCASTS PDY RADIO</h3>
@@ -58,7 +58,6 @@
             </div>
         </div>
 
-        <!-- Sidebar com ouvintes -->
         <aside class="topouvintes">
             <h3>Top Ouvintes</h3>
             <h4>Rogerinho</h4>
@@ -76,7 +75,6 @@
             <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
         </div>
     </footer>
-
 
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
     <script>
@@ -97,7 +95,7 @@
                 }
             ]
         });
-    
+
         ap.on('loadedmetadata', () => {
             const progress = ap.container.querySelector('.aplayer-bar-wrap');
             if (progress) {
@@ -108,3 +106,4 @@
     </script>
 </body>
 </html>
+
