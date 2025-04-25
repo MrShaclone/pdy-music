@@ -109,9 +109,13 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin : 0;
+    margin: 0;
     background-image: url("../img/fundo.gif");
- }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
   .form-group input {
     width: 100%; /* Mantém a largura dentro do contêiner */
     max-width: 350px; /* Define um limite para evitar que ultrapasse o card */
