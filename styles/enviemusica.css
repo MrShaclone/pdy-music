@@ -95,6 +95,11 @@ nav {
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
     color: #ffffff;
   }
+
+  .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    color: black !important;
+}
+
   
   .contact-form .heading {
     font-size: 28px;

@@ -14,28 +14,28 @@ const radioAleatoria = radios[Math.floor(Math.random() * radios.length)]
 
 const music_rock = [
     {
-        name: 'PDY Rádio Ao Vivo',
-        artist: 'DJ Conectado',
-        url: 'music/music-rock/shboom.mp3',
-        cover: ''
+        name: 'Bar do China - Saga do Exodia',
+        artist: 'CHINA BARS',
+        url: '../music/music-mpb/Bar do China - A Saga do Exodia.mp3',
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     }
 ]
 
@@ -44,26 +44,33 @@ const music_mpb = [
         name: 'Minha Felicidade',
         artist: 'Roberta Campos',
         url: '../music/music-mpb/minha-felicidade.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'Meu Abrigo',
         artist: 'Melim',
         url: '../music/music-mpb/meu-abrigo.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'Acenda o farol',
         artist: 'Tim Maia',
         url: '../music/music-mpb/acenda-o-farol.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'Não Quero Dinheiro (Só Quero Amar)',
         artist: 'Tim Maia',
         url: '../music/music-mpb/não-quero-dinheiro-só-quero-amar.mp3',
-        cover: ''
+        cover: '../img/logo.png'
+    },
+    {
+        name: 'Bar do China - Saga do Exodia',
+        artist: 'CHINA BARS',
+        url: '../music/music-mpb/Bar do China - A Saga do Exodia.mp3',
+        cover: '../img/logo.png'
     }
+
 ]
 
 const music_sertanejo = [
@@ -71,52 +78,52 @@ const music_sertanejo = [
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'playlists/shboom.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     }
 ]
 
 const music_funk = [
     {
-        name: 'PDY Rádio Ao Vivo',
-        artist: 'DJ Conectado',
-        url: 'playlists/shboom.mp3',
-        cover: ''
+        name: 'RAP do China - Saga do Dabura',
+        artist: 'CHINA BARS',
+        url: '../music/music-mpb/Rap do china.mp3',
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     },
     {
         name: 'PDY Rádio Ao Vivo',
         artist: 'DJ Conectado',
         url: 'teste.mp3',
-        cover: ''
+        cover: '../img/logo.png'
     }
 ]
 

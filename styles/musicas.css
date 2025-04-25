@@ -200,5 +200,20 @@ nav {
 .teste{
     cursor: pointer;
 }
+.topouvintes .ouvinte {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.topouvintes .ouvinte img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* deixa a imagem redondinha */
+    margin-right: 10px;
+}
+.aplayer .aplayer-info .aplayer-music .aplayer-title {
+    color: black !important;
+}
 
 
