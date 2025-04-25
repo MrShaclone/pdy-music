@@ -2,8 +2,15 @@ const rockMetal = document.getElementById('rock-metal');
 const funkBrasil = document.getElementById('funk-brasil');
 const sertanejoRaiz = document.getElementById('sertanejo-raiz');
 const mpb = document.getElementById('mpb');
-const radioAtual = document.getElementById('radioAtualNome');
-const radioAtualImg = document.getElementById('radioAtualImg');
+const radioAtual = document.getElementById('nome-radio');
+const radioAtualImg = document.getElementById('img-radio');
+const podcast1 = document.getElementById('podcast-1');
+const podcast2 = document.getElementById('podcast-2');
+const podcast3 = document.getElementById('podcast-3');
+const podcast4 = document.getElementById('podcast-4');
+
+const radios = [rockMetal, funkBrasil, sertanejoRaiz, mpb];
+const radioAleatoria = radios[Math.floor(Math.random() * radios.length)]
 
 const music_rock = [
     {
@@ -36,25 +43,25 @@ const music_mpb = [
     {
         name: 'Minha Felicidade',
         artist: 'Roberta Campos',
-        url: 'music/music-mpb/minha-felicidade.mp3',
+        url: '../music/music-mpb/minha-felicidade.mp3',
         cover: ''
     },
     {
         name: 'Meu Abrigo',
         artist: 'Melim',
-        url: 'music/music-mpb/meu-abrigo.mp3',
+        url: '../music/music-mpb/meu-abrigo.mp3',
         cover: ''
     },
     {
         name: 'Acenda o farol',
         artist: 'Tim Maia',
-        url: 'music/music-mpb/acenda-o-farol.mp3',
+        url: '../music/music-mpb/acenda-o-farol.mp3',
         cover: ''
     },
     {
         name: 'Não Quero Dinheiro (Só Quero Amar)',
         artist: 'Tim Maia',
-        url: 'music/music-mpb/não-quero-dinheiro-só-quero-amar.mp3',
+        url: '../music/music-mpb/não-quero-dinheiro-só-quero-amar.mp3',
         cover: ''
     }
 ]
@@ -118,9 +125,11 @@ const ap = new APlayer({
     fixed: false,
     autoplay: false,
     loop: 'all',
-    order: 'list',
+    order: 'random',
     preload: 'auto',
-    audio: music_mpb
+    audio: music_mpb,
+    theme: '#0a3d62',
+    listFolded: true
 });
 
 ap.on('loadedmetadata', () => {
@@ -130,6 +139,7 @@ ap.on('loadedmetadata', () => {
         progress.style.opacity = '0.6';
     }
 });
+
 
 // Funcao para trocar o radio atual para qual a pessoa selecionar
 function trocarRadioAtual(radio){
@@ -162,6 +172,35 @@ function trocarRadioAtual(radio){
             radioAtual.textContent = '';
     }  
 }
+
+function trocarPodcastAtual(podcast){
+    switch (podcast.id){
+        case 'podcast-1': 
+            radioAtual.textContent = 'Podcast 1';
+            radioAtualImg.src = podcast1.src;
+            ap.list.clear();
+            break;
+        case 'podcast-2':
+            radioAtual.textContent = 'Podcast 2';
+            radioAtualImg.src = podcast2.src;
+            ap.list.clear();
+            break;
+        case 'podcast-3':
+            radioAtual.textContent = 'Podcast 3';
+            radioAtualImg.src = podcast3.src;
+            ap.list.clear();
+            break;
+        case 'podcast-4':
+            radioAtual.textContent = 'Podcast 4';
+            radioAtualImg.src = podcast4.src;
+            ap.list.clear();
+            break;
+        default:
+            radioAtual.textContent = '';
+    }  
+}
+
+trocarRadioAtual(radioAleatoria);
 
 //Evento de click para mudar a radio
 rockMetal.addEventListener('click', () =>{

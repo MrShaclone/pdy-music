@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdy Music</title>
+    <link rel="stylesheet" type="text/css" href="../styles/musicas.css">
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+</head>
+<body>
+    <header class="menu">
+        <img src="../img/logo.png" alt="Pdy music logo.">
+        <nav>
+            <a href="../index.html" class="link">Início</a>
+            <a href="musicas.html" class="link">Músicas</a>
+            <a href="podcasts.html" class="link">Podcasts</a>
+            <a href="enviemusica.html" class="link">Envie sua música</a>
+            <a href="loginForm.html"><button class="loginbtn" id="loginbtn">Entrar</button></a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Player -->
+            <div class="musicaatual">
+                <img src="../img/logo2.png" alt="Radio atual!" id="img-radio">
+                <div class="box1">
+                    <h2 id="nome-radio"></h2>
+                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                </div>
+                <div id="aplayer"></div>
+            </div>
+
+            <!-- Top Músicas -->
+            <div class="topmusic">
+                <div class="box1">
+                    <h3>MÚSICAS PDY RADIO</h3>
+                </div>
+                <div class="box2">
+                    <img class = "teste" src="../img/radio-rock-metal.jpg" alt="Rock Metal" id="rock-metal">
+                    <img class = "teste" src="../img/funkbrasil.jpg" alt="Funk Brasil" id="funk-brasil">
+                    <img class = "teste" src="../img/sertanejo.jpg" alt="Sertanejo" id="sertanejo-raiz">
+                    <img class = "teste" src="../img/radio-mpb.jpg" alt="MPB" id="mpb">
+                    <img class = "teste" src="../img/lofiradio.jpg" alt="Lo-fi">
+                    <img class = "teste" src="../img/trapradio.png" alt="Trap">
+                    <img class = "teste" src="../img/forroradio.jpg" alt="Forró">
+                    <img class = "teste" src="../img/eletronicaradio.png" alt="Eletrônica">
+                    <img class = "teste" src="../img/pagoderadio.jpg" alt="Pagode">
+                    <img class = "teste" src="../img/phonkradio.jpg" alt="Phonk">
+                    <img class = "teste" src="../img/radio-reggae.jpg" alt="Reggae">
+                    <img class = "teste" src="../img/radio-gospel.jpg" alt="Gospel">
+                    <img class = "teste" src="../img/radio-samba.png" alt="Samba">
+                    <img class = "teste" src="../img/sertanejoraiz.png" alt="Sertanejo Raiz">
+                    <img class = "teste" src="../img/radio-rock-ballads.jpg" alt="Rock Clássico">
+                    <img class = "teste" src="../img/radio-hip-hop.jpg" alt="Hip Hop">
+                    <img class = "teste" src="../img/radio-romanticas.jpg" alt="Românticas">
+                    <img class = "teste" src="../img/flashback.jpg" alt="Flashback Anos 80">
+                    <img class = "teste" src="../img/radio-pop-rock.jpg" alt="Pop Rock">
+                    <img class = "teste" src="../img/radio-pop-rock80.jpg" alt="Pop Rock 80">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar com ouvintes -->
+        <aside class="topouvintes">
+            <h3>Top Ouvintes</h3>
+            <h4>Rogerinho</h4>
+            <h4>China</h4>
+            <h4>XamBaoXD</h4>
+        </aside>
+    </div>
+
+    <footer class="rodape">
+        <div>
+            <img src="../img/logotipo-do-instagram.png" alt="Instagram">
+            <img src="../img/facebook.png" alt="Facebook">
+            <img src="../img/X twitter.png" alt="X">
+            <img src="../img/gmail.png" alt="E-mail de Contato">
+            <p>Copyright &copy;2025 PDY MUSIC - Todos direitos reservados!</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
