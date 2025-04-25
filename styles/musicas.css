@@ -197,4 +197,8 @@ nav {
     transform: scale(1.05);
     box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
 }
+.teste{
+    cursor: pointer;
+}
+
 
