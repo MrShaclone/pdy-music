@@ -130,3 +130,12 @@ body {
     font-size: 18px;
     margin-bottom: 1px;
   }
+  .sign-up-link{
+      text-decoration: none !important;
+      color: inherit;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out; 
+  }
+  .sign-up-link:hover{
+      color: #1778f2; 
+  }
