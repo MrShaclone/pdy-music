@@ -10,79 +10,66 @@
 <body>
     <div class="container">
         <div class="main-content">
-            <!-- Player -->
+        
             <div class="musicaatual">
-                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <img src="img/random.jpg" alt="Radio atual!" id="img-radio">
                 <div class="box1">
-                    <h2 id="nomeradio">Radio atual</h2>
-                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                    <h2 id="nome-radio">Rádio atual</h2>
+                    <p>Uma seleção repleta de hits de sucesso para você ouvir</p>
                 </div>
                 <div id="aplayer"></div>
             </div>
 
-            <!-- Top Músicas -->
+            
             <div class="topmusic">
                 <div class="box1">
                     <h3>TOP MÚSICAS PDY RADIO</h3>
                 </div>
                 <div class="box2">
-                    <img src="img/emoji1.jpg" alt="Rock Metal">
-                    <img src="img/emoji2.jpg" alt="Funk Brasil">
-                    <img src="img/emoji3.jpg" alt="Sertanejo Raiz">
-                    <img src="img/emoji4.jpg" alt="MPB">
+                    <img class = "teste" src="img/radio-rock-metal.jpg" alt="rock-metal" id="rock-metal">
+                    <img class = "teste" src="img/funkbrasil.jpg" alt="funk-brasil" id="funk-brasil">
+                    <img class = "teste" src="img/sertanejoraiz.png" alt="sertanejo-raiz" id="sertanejo-raiz">
+                    <img class = "teste" src="img/radio-mpb.jpg" alt="mpb" id="mpb">
                 </div>
             </div>
 
-            <!-- Top Podcasts -->
+
             <div class="toppodcast">
                 <div class="box1">
                     <h3>TOP PODCASTS PDY RADIO</h3>
                 </div>
                 <div class="box2">
-                    <img src="img/emoji5.jpg" alt="Podcast 1">
-                    <img src="img/emoji3.jpg" alt="Podcast 2">
-                    <img src="img/emoji1.jpg" alt="Podcast 3">
-                    <img src="img/joinha.jpeg" alt="Podcast 4">
+                    <img class = "teste" src="img/diddyCast.png" alt="Podcast 1" id="podcast-1">
+                    <img class = "teste" src="img/babyCast.png" alt="Podcast 2" id="podcast-2">
+                    <img class = "teste" src="img/redCast.png" alt="Podcast 3" id="podcast-3">
+                    <img class = "teste" src="img/ChinaCast.png" alt="Podcast 4" id="podcast-4">
                 </div>
             </div>
         </div>
 
-        <!-- Sidebar com ouvintes -->
         <aside class="topouvintes">
             <h3>Top Ouvintes</h3>
-            <h4>Rogerinho</h4>
-            <h4>China</h4>
-            <h4>XamBaoXD</h4>
+        
+            <div class="ouvinte">
+                <img src="img/Djrogerinho.jpg" alt="Avatar do Rogerinho">
+                <span>DJ Rogerinho - 1200 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="img/China.jpg" alt="Avatar do China">
+                <span>China - 1123 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="img/Xambao.jpg" alt="Avatar do XamBaoXD">
+                <span>XamBaoXD - 957 Pontos</span>
+            </div>
         </aside>
     </div>
+  
     <script src="nav.js"></script>
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
-    <script>
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            fixed: false,
-            autoplay: true,
-            loop: 'all',
-            order: 'list',
-            preload: 'auto',
-            listFolded: false,
-            audio: [
-                {
-                    name: 'PDY Rádio Ao Vivo',
-                    artist: 'DJ Conectado',
-                    url: 'playlists/shboom.mp3',
-                    cover: ''
-                }
-            ]
-        });
-    
-        ap.on('loadedmetadata', () => {
-            const progress = ap.container.querySelector('.aplayer-bar-wrap');
-            if (progress) {
-                progress.style.pointerEvents = 'none';
-                progress.style.opacity = '0.6';
-            }
-        });
-    </script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
+

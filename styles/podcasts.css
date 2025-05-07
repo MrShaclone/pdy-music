@@ -197,4 +197,18 @@ nav {
     transform: scale(1.05);
     box-shadow: 0 1px 1px rgba(56, 56, 56, 0.904);
 }
+.topouvintes .ouvinte {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.topouvintes .ouvinte img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* deixa a imagem redondinha */
+    margin-right: 10px;
+}
+.aplayer .aplayer-info .aplayer-music .aplayer-title {
+    color: black !important;
+}

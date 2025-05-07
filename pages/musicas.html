@@ -12,9 +12,9 @@
         <div class="main-content">
             <!-- Player -->
             <div class="musicaatual">
-                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <img src="../img/logo2.png" alt="Radio atual!" id="img-radio">
                 <div class="box1">
-                    <h2 id="nomeradio">Radio atual</h2>
+                    <h2 id="nome-radio"></h2>
                     <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
                 </div>
                 <div id="aplayer"></div>
@@ -26,67 +26,51 @@
                     <h3>MÚSICAS PDY RADIO</h3>
                 </div>
                 <div class="box2">
-                    <img src="img/rock-metal.jpg" alt="Rock Metal">
-                    <img src="img/funk-brasil.jpg" alt="Funk Brasil">
-                    <img src="img/sertanejo.jpg" alt="Sertanejo">
-                    <img src="img/mpb.jpg" alt="MPB">
-                    <img src="img/lofi.jpg" alt="Lo-fi">
-                    <img src="img/trap.jpg" alt="Trap">
-                    <img src="img/forro.jpg" alt="Forró">
-                    <img src="img/eletronica.jpg" alt="Eletrônica">
-                    <img src="img/pagode.jpg" alt="Pagode">
-                    <img src="img/Phonk.jpg" alt="Phonk">
-                    <img src="img/reggae.jpg" alt="Reggae">
-                    <img src="img/gospel.jpg" alt="Gospel">
-                    <img src="img/samba.jpg" alt="Samba">
-                    <img src="img/sertanejo-raiz.jpg" alt="Sertanejo Raiz">
-                    <img src="img/rock-classico.jpg" alt="Rock Clássico">
-                    <img src="img/hip-hop.jpg" alt="Hip Hop">
-                    <img src="img/romanticas.jpg" alt="Românticas">
-                    <img src="img/flashback-anos80.jpg" alt="Flashback Anos 80">
-                    <img src="img/pop-rock.jpg" alt="Pop Rock">
-                    <img src="img/pop-internacional.jpg" alt="Pop Internacional">
+                    <img class = "teste" src="../img/radio-rock-metal.jpg" alt="Rock Metal" id="rock-metal">
+                    <img class = "teste" src="../img/funkbrasil.jpg" alt="Funk Brasil" id="funk-brasil">
+                    <img class = "teste" src="../img/sertanejo.jpg" alt="Sertanejo" id="sertanejo">
+                    <img class = "teste" src="../img/radio-mpb.jpg" alt="MPB" id="mpb">
+                    <img class = "teste" src="../img/lofiradio.jpg" alt="Lo-fi" id="lo-fi">
+                    <img class = "teste" src="../img/trapradio.png" alt="Trap" id="trap">
+                    <img class = "teste" src="../img/forroradio.jpg" alt="Forró" id="forro">
+                    <img class = "teste" src="../img/eletronicaradio.png" alt="Eletrônica" id="eletronica">
+                    <img class = "teste" src="../img/pagoderadio.jpg" alt="Pagode" id="pagode">
+                    <img class = "teste" src="../img/phonkradio.jpg" alt="Phonk" id="phonk">
+                    <img class = "teste" src="../img/radio-reggae.jpg" alt="Reggae" id="reggae">
+                    <img class = "teste" src="../img/radio-gospel.jpg" alt="Gospel" id="gospel">
+                    <img class = "teste" src="../img/radio-samba.png" alt="Samba" id="samba">
+                    <img class = "teste" src="../img/sertanejoraiz.png" alt="Sertanejo Raiz" id="sertanejo-raiz">
+                    <img class = "teste" src="../img/radio-rock-ballads.jpg" alt="Rock Clássico" id="rock-classico">
+                    <img class = "teste" src="../img/radio-hip-hop.jpg" alt="Hip Hop" id="hip-hop">
+                    <img class = "teste" src="../img/radio-romanticas.jpg" alt="Românticas" id="romanticas">
+                    <img class = "teste" src="../img/flashback.jpg" alt="Flashback Anos 80" id="flashback-80s">
+                    <img class = "teste" src="../img/radio-pop-rock.jpg" alt="Pop Rock" id="pop-rock">
+                    <img class = "teste" src="../img/radio-pop-rock80.jpg" alt="Pop Rock 80" id="pop-rock-80s">
                 </div>
-                
             </div>
         </div>
 
-        <!-- Sidebar com ouvintes -->
         <aside class="topouvintes">
             <h3>Top Ouvintes</h3>
-            <h4>Rogerinho</h4>
-            <h4>China</h4>
-            <h4>XamBaoXD</h4>
+        
+            <div class="ouvinte">
+                <img src="../img/Djrogerinho.jpg" alt="Avatar do Rogerinho">
+                <span>DJ Rogerinho - 1200 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="../img/China.jpg" alt="Avatar do China">
+                <span>China - 1123 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="../img/Xambao.jpg" alt="Avatar do XamBaoXD">
+                <span>XamBaoXD - 957 Pontos</span>
+            </div>
         </aside>
     </div>
     <script src="../nav.js"></script>
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
-    <script>
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            fixed: false,
-            autoplay: true,
-            loop: 'all',
-            order: 'list',
-            preload: 'auto',
-            listFolded: false,
-            audio: [
-                {
-                    name: 'PDY Rádio Ao Vivo',
-                    artist: 'DJ Conectado',
-                    url: 'playlists/shboom.mp3',
-                    cover: ''
-                }
-            ]
-        });
-
-        ap.on('loadedmetadata', () => {
-            const progress = ap.container.querySelector('.aplayer-bar-wrap');
-            if (progress) {
-                progress.style.pointerEvents = 'none';
-                progress.style.opacity = '0.6';
-            }
-        });
-    </script>
+    <script src="../scripts/app.js"></script>
 </body>
 </html>

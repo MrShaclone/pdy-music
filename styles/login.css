@@ -138,7 +138,36 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin : 0;
+    margin: 0;
     background-image: url("../img/fundo.gif");
- }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+ .page-link-label {
+  display: inline-block;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.page-link-label:hover {
+  color: #1778f2; 
+}
+
+.sign-up-link{
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; 
+}
+.sign-up-link:hover {
+  color: #1778f2; 
+}
+
+
+
+
   

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pdy Music</title>
+    <title>Pdy Music - Podcasts</title>
     <link rel="stylesheet" type="text/css" href="../styles/podcasts.css">
     <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
 </head>
@@ -12,54 +12,63 @@
         <div class="main-content">
             <!-- Player -->
             <div class="musicaatual">
-                <img src="img/joinha.jpeg" alt="Radio atual!">
+                <img src="../img/diddyCast.png" alt="Podcast atual!">
                 <div class="box1">
-                    <h2 id="nomeradio">Radio atual</h2>
-                    <p>Uma seleção repleta de hits de sucessos para você ouvir</p>
+                    <h2 id="nomeradio">Podcast em Destaque</h2>
+                    <p>Confira o episódio mais recente da nossa seleção!</p>
                 </div>
                 <div id="aplayer"></div>
             </div>
 
-            <!-- Top Músicas -->
+            <!-- Lista de Podcasts -->
             <div class="topmusic">
                 <div class="box1">
                     <h3>PODCASTS PDY RADIO</h3>
                 </div>
                 <div class="box2">
-                    <img src="img/exodiacast.jpg" alt="ExodiaCast">
-                    <img src="img/diddycast.jpg" alt="DiddyCast">
-                    <img src="img/chinacast.jpg" alt="ChinaCast">
-                    <img src="img/babycast.jpg" alt="BabyCast">
-                    <img src="img/papoparalelo.jpg" alt="Papo Paralelo">
-                    <img src="img/nafrequencia.jpg" alt="Na Frequência">
-                    <img src="img/vibeerrada.jpg" alt="Vibe Errada">
-                    <img src="img/zeropaciencia.jpg" alt="Zero Paciência">
-                    <img src="img/cafecomnoise.jpg" alt="Café com Noise">
-                    <img src="img/papofurado.jpg" alt="Papo Furado">
-                    <img src="img/conexaosuburbio.jpg" alt="Conexão Subúrbio">
-                    <img src="img/micaberto.jpg" alt="Mic Aberto">
-                    <img src="img/miolomole.jpg" alt="Rádio Miolo Mole">
-                    <img src="img/quaseserio.jpg" alt="Quase Sério">
-                    <img src="img/deurruim.jpg" alt="Deu Ruim Podcast">
-                    <img src="img/zumbidosonoro.jpg" alt="Zumbido Sonoro">
-                    <img src="img/semfiltro.jpg" alt="Meia Noite Sem Filtro">
-                    <img src="img/aleatoriocast.jpg" alt="Aleatoriamente Cast">
-                    <img src="img/fitarebobinada.jpg" alt="Fita Rebobinada">
-                    <img src="img/ligadoaudio.jpg" alt="Liga do Áudio">
+                    <img src="../img/exodiacast.jpg" alt="ExodiaCast">
+                    <img src="../img/diddyCast.png" alt="DiddyCast">
+                    <img src="../img/ChinaCast.png" alt="ChinaCast">
+                    <img src="../img/babyCast.png" alt="BabyCast">
+                    <img src="../img/papoparalelo.jpg" alt="Papo Paralelo">
+                    <img src="../img/nafrequencia.jpg" alt="Na Frequência">
+                    <img src="../img/vibeerrada.jpg" alt="Vibe Errada">
+                    <img src="../img/zeropaciencia.jpg" alt="Zero Paciência">
+                    <img src="../img/cafecomnoise.jpg" alt="Café com Noise">
+                    <img src="../img/papofurado.jpg" alt="Papo Furado">
+                    <img src="../img/conexaosuburbio.jpg" alt="Conexão Subúrbio">
+                    <img src="../img/micaberto.jpg" alt="Mic Aberto">
+                    <img src="../img/miolomole.jpg" alt="Rádio Miolo Mole">
+                    <img src="../img/quaseserio.jpg" alt="Quase Sério">
+                    <img src="../img/deurruim.jpg" alt="Deu Ruim Podcast">
+                    <img src="../img/zumbidosonoro.jpg" alt="Zumbido Sonoro">
+                    <img src="../img/semfiltro.jpg" alt="Meia Noite Sem Filtro">
+                    <img src="../img/aleatoriocast.jpg" alt="Aleatoriamente Cast">
+                    <img src="../img/fitarebobinada.jpg" alt="Fita Rebobinada">
+                    <img src="../img/ligadoaudio.jpg" alt="Liga do Áudio">
                 </div>
-                
             </div>
         </div>
 
-        <!-- Sidebar com ouvintes -->
         <aside class="topouvintes">
             <h3>Top Ouvintes</h3>
-            <h4>Rogerinho</h4>
-            <h4>China</h4>
-            <h4>XamBaoXD</h4>
+        
+            <div class="ouvinte">
+                <img src="../img/Djrogerinho.jpg" alt="Avatar do Rogerinho">
+                <span>DJ Rogerinho - 1200 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="../img/China.jpg" alt="Avatar do China">
+                <span>China - 1123 Pontos</span>
+            </div>
+        
+            <div class="ouvinte">
+                <img src="../img/Xambao.jpg" alt="Avatar do XamBaoXD">
+                <span>XamBaoXD - 957 Pontos</span>
+            </div>
         </aside>
     </div>
-
     <script src="../nav.js"></script>
     <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
     <script>
@@ -73,10 +82,10 @@
             listFolded: false,
             audio: [
                 {
-                    name: 'PDY Rádio Ao Vivo',
-                    artist: 'DJ Conectado',
-                    url: 'playlists/shboom.mp3',
-                    cover: ''
+                    name: 'Podcast em destaque: ExodiaCast #1',
+                    artist: 'Exodia Crew',
+                    url: '../playlists/exodiacast1.mp3',
+                    cover: '../img/exodiacast.jpg'
                 }
             ]
         });
